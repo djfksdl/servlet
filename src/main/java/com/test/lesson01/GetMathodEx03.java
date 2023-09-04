@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 public class GetMathodEx03 extends HttpServlet{
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		//add comment -git Test
 		// 한글깨짐 방지 -> plain
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/plain");

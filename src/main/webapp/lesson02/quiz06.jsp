@@ -14,19 +14,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="container">
-		<h1>책목록</h1>
-		<form type="post" action="/lesson02/quiz06">
-		<table>
-			<thead>
-				<tr>	
-					<th>id</th>
-					<th>표지</th>
-					<th>제목</th>
-				</tr>
-			</thead>
-			<tbody>
-			<%
+<%
 			 List<Map<String, Object>> list = new ArrayList<>();
 		    Map<String, Object> map = new HashMap<String, Object>() {
 		        { 
@@ -71,15 +59,33 @@
 		        } 
 		    };
 		    list.add(map);
-		    for(){
 		    %>
-		    <tr>
-		    	<td><%= %></td>
+	<div class="container">
+		<h1 class="text-center">책목록</h1>
+		<table class="table text-center">
+			<thead>
+				<tr class="row">	
+					<th class="col-1">id</th>
+					<th class="col-2">표지</th>
+					<th class="col-9">제목</th>
+				</tr>
+			</thead>
+			<tbody>
+			<% 
+				for (Map<String, Object> item : list){
+					
+			%>
+			
+		    <tr class="row">
+		    	<td class="col-1"><%= item.get("id") %></td>
+		    	<td class="col-2"><img src="<%= item.get("image") %>" alt="표지" width="100"></td>
+		    	<td class="col-9"><a href="/lesson02/quiz08_1.jsp?id=<%=item.get("id") %>" class="text-decoration-none"><%=item.get("title") %></a></td>
 		    </tr>
+		    <% 
 		    }
+		    %>
 			</tbody>
 		</table>
-		</form>
 	</div>
 </body>
 </html>

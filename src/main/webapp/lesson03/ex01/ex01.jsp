@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>현재시간은</title>
 </head>
 <body>
-
+	현재시간은?<br>
+	<%@ include file="date.jsp" %>
 </body>
 </html>

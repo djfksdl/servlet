@@ -51,8 +51,12 @@
 	</tr>
 </thead>
 <tbody>
-	<%
+	<% 
+		String category = request.getParameter("category");
 		for (Map<String, String> item: list){
+			//카테고리가 null일때 (전체) 또는 카테고리와 일치할 때
+			if(category == null || category.equals(item.get("category"))){
+				
 	%>
 	<tr class="row">
 		<td class="col-3"><%= item.get("ch")%></td>

@@ -4,10 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>현재시간은</title>
+<title>현재 시간</title>
 </head>
 <body>
-	현재시간은?<br>
+	현재 시간은?<br>
 	<%@ include file="date.jsp" %>
 </body>
 </html>
+
+
+
+
+

@@ -11,7 +11,7 @@
 <body>
 <% 
 	//DB 연결
-	MysqlService ms = MysqlService.getInstance //컨트롤 스페이스바
+	MysqlService ms = MysqlService.getInstance(); //컨트롤 스페이스바
 	ms.connect();
 	//DB select
 	String selectQuery = "select * from `new_user`";

@@ -12,19 +12,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="post" action="/lesson04/sign-up">
+	<div class="container">
 		<h1>즐겨찾기 추가</h1>
-		<p>
-			<b>사이트명: </b> 
-		<p>
-		<input type="text" name="name">
-		</p>
-			<b>사이트 주소</b> 
-		</p>
-		<input type="text" name="address">
-		<p>
-			<input type="submit" value="추가" class="btn btn-success">
-		</p>
-	</form>
+		<form method="post" action="/lesson04/add-bookmark">
+			<div class="form-group">
+				<label for="name">사이트명:</label>
+				<input type="text" class="form-control col-4" id="name" name="name">
+			</div>
+			<div class="form-group">
+				<label for="name">사이트 주소:</label>
+				<input type="text" class="form-control col-8" id="url" name="url">
+			</div>
+			<button type="submit" class="btn btn-success">추가</button>
+		</form>
+	</div>
 </body>
 </html>
